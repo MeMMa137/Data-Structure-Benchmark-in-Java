@@ -59,4 +59,39 @@ class ArrayBenchmark implements Data_Benchmark {
         return System.currentTimeMillis() - ti;
     }
     
+    //FUNZIONI SINGOLE
+    int somma() {
+        int s = 0;
+        for (int i = 0; i < v.length; i++) {
+            s += v[i];
+        }
+        return s;
+    }
+
+    int sommaIndietro() {
+        int s = 0;
+        for (int i = v.length - 1; i >= 0; i--) {
+            s += v[i];
+        }
+        return s;
+    }
+
+    void insTesta(int val) {
+        int[] nv = new int[v.length + 1];
+        nv[0] = val;
+        for (int i = 0; i < v.length; i++) {
+            nv[i + 1] = v[i];
+        }
+        v = nv;
+    }
+
+    void insCoda(int val) {
+        int[] nv = new int[v.length + 1];
+        nv[v.length] = val;
+        for (int i = 0; i < v.length; i++) {
+            nv[i] = v[i];
+        }
+        v = nv;
+    }
+    
 }
