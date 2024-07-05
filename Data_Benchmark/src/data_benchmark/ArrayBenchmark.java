@@ -94,4 +94,34 @@ class ArrayBenchmark implements Data_Benchmark {
         v = nv;
     }
     
+     void insInPos(int val, int p) {
+        int[] nv = new int[v.length + 1];
+        nv[p] = val;
+        for (int i = 0; i < p; i++) {
+            nv[i] = v[i];
+        }
+        for (int i = p + 1; i < v.length; i++) {
+            nv[i + 1] = v[i];
+        }
+        v = nv;
+    }
+
+    boolean cancInPos(int p) {
+        if (v.length == 0) {
+            return false;
+        }
+        if (p <= 0 || p >= v.length) {
+            return false;
+        }
+        int[] nv = new int[v.length - 1];
+        for (int i = 0; i < p; i++) {
+            nv[i] = v[i];
+        }
+        for (int i = p + 1; i < v.length; i++) {
+            nv[i - 1] = v[i];
+        }
+        v = nv;
+        return true;
+    }
+    
 }
