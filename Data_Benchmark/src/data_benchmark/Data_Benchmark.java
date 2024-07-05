@@ -1,20 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package data_benchmark;
 
-/**
- *
- * @author emmab
- */
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Data_Benchmark {
 
-    /**
-     * @param args the command line arguments
-     */
+     static void SOP(String s) {
+        System.out.println(s);
+    }
+     
     public static void main(String[] args) {
-        // TODO code application logic here
+        Benchmark[] struttureDati = { //crea un array di oggetti che implementano l'interfaccia
+
+            new ArrayBenchmark(),
+            new ArrayBenchmark(),
+          /*  new ArrayBenchmark(),
+            new ListBenchmark(),
+            new ListBenchmark(),
+            new ListBenchmark(),
+            new ListaMonoBenchmark(),
+            new ListaMonoBenchmark(),
+            new ListaMonoBenchmark(),
+            new LinkedListBenchmark(),
+            new LinkedListBenchmark(),
+            new LinkedListBenchmark(),
+            new ArrayListBenchmark(),
+            new ArrayListBenchmark(),
+            new ArrayListBenchmark()*/
+
+        };
     }
     
 }
