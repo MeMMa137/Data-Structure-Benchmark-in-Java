@@ -15,11 +15,11 @@ public class Data_Benchmark {
 
             new ArrayBenchmark(),
             new ArrayBenchmark(),
-          /*  new ArrayBenchmark(),
+            new ArrayBenchmark(),
             new ListBenchmark(),
             new ListBenchmark(),
             new ListBenchmark(),
-            new ListaMonoBenchmark(),
+          /*  new ListaMonoBenchmark(),
             new ListaMonoBenchmark(),
             new ListaMonoBenchmark(),
             new LinkedListBenchmark(),
