@@ -161,5 +161,16 @@ public class ListBenchmark extends Benchmark {
                 p = p.next;
             }
         }
+        
+         //INIZIO INSERIMENTO
+        NodoBi n = new NodoBi(valore); //si crea il nuovo elemento da inserire
+        p.prev.next = n; //quello prima, punta a quello nuovo
+        n.prev = p.prev; //quello nuovo punta a quello prima
+        p.prev = n; //quello dopo punta a quello nuovo
+        n.next = p; //quello nuovo punta a quello dopo
+        this.nElementi++; //si aggiunge 1 al contatore di elementi nella lista
+        return true;
+
+    }
     
 }
