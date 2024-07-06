@@ -115,4 +115,51 @@ public class ListBenchmark extends Benchmark {
         }
     }
     
+    void cancellaInPos(int pos) {
+        NodoBi p = h; //parte dalla testa
+        for (int i = 0; i < pos; i++) {
+            p = p.next; //il puntatore scorre
+        }
+        if (p.prev == null) { //se è il primo basterà far puntare la testa a quello successivo
+            h = p.next;
+        } else {
+            p.prev.next = p.next; //il precedente di quello da cancellare punta al successivo di quello da cancellare
+        }
+        if (p.next == null) { //se è l'ultimo basterà far puntare la coda a quello precedente
+            t = p.prev;
+        } else {
+            p.next.prev = p.prev; //il successivo di quello da cancellare punta al precedente di quello da cancellare
+        }
+    }
+
+    boolean insInPos(int valore, int pos) {
+        if (pos < 0 || pos > nElementi) //se la posizione da input è fuori dalla lista, non si mette
+        {
+            return false;
+        }
+        if (nElementi == 0 || pos == 0) { //se gli elementi non ci sono o si inseriscono in posizione 0, si mettono in testa
+            insInTesta(valore);
+            return true;
+        }
+        if (pos == nElementi) { //se la posizione è alla fine, si inserisce in coda           
+            insInCoda(valore);
+            return true;
+        }
+
+        NodoBi p; //si crea puntatore a elemento DOPO punto di inserimento
+
+        if (pos > nElementi / 2) { //se conviene(posizione supera la metà degli elementi) si parte dal fondo (cosa) a cercare il punto
+            p = t;
+            for (int i = nElementi - 1; i >= pos; i--) //si scorre decrementando, essendo partiti dal fondo (coda)
+            {
+                p = p.prev; //anche il puntatore scorre passando all'elemento prima di se stesso
+            }
+        } else { //se conviene(posizione è sotto la metà degli elementi) si parte dall'inizio (testa) a cercare il punto
+            p = h;
+            for (int i = 0; i < pos; i++)//si scorre incrementando, essendo partiti dall'inizio (testa)
+            {
+                p = p.next;
+            }
+        }
+    
 }
