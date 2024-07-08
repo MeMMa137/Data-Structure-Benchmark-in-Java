@@ -25,10 +25,9 @@ public class Data_Benchmark {
             new LinkedListBenchmark(),
             new LinkedListBenchmark(),
             new LinkedListBenchmark(),
-           /* new ArrayListBenchmark(),
             new ArrayListBenchmark(),
-            new ArrayListBenchmark()*/
-
+            new ArrayListBenchmark(),
+            new ArrayListBenchmark()
         };
     }
     
