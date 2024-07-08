@@ -22,10 +22,10 @@ public class Data_Benchmark {
             new ListaMonoBenchmark(),
             new ListaMonoBenchmark(),
             new ListaMonoBenchmark(),
-           /* new LinkedListBenchmark(),
             new LinkedListBenchmark(),
             new LinkedListBenchmark(),
-            new ArrayListBenchmark(),
+            new LinkedListBenchmark(),
+           /* new ArrayListBenchmark(),
             new ArrayListBenchmark(),
             new ArrayListBenchmark()*/
 
