@@ -1,8 +1,8 @@
-This Java code uses statistics to identify the type of text entered, also providing probabilistic graphs.
- 👾TO RUN:
+This Java code runs a benchmark test to identify the fastest data structure on your PC.
+
+👾 TO RUN:
 Apache NetBeans IDE 16 was used for development, you can start the program by loading the code and starting it.
-To identify a text you need to insert it into the folder dedicated to texts, you can still try the examples already present.
-The graphs are found inside the .xlsx files, which can be opened with any editor (Excel, Google Sheets, Libre Office Calc...).
+The benchmark results can be viewed both from the IDE console, but also a simplified version on .xlsx files, which can be opened with any editor (Excel, Google Sheets, Libre Office Calc...).
 I recommend keeping the same versions of the IDE indicated, in order not to encounter errors.
 
 
